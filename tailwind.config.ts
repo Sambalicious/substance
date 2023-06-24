@@ -3,12 +3,7 @@ import { shadcnPreset } from "./src/lib/shadcn-preset";
 
 const config = {
   presets: [shadcnPreset],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "components/**/*.{ts,tsx}",
-    "app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
 } satisfies Config;
 
 export default config;

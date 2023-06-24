@@ -3,6 +3,7 @@ import plugin from "tailwindcss/plugin";
 
 export const shadcnPlugin = plugin(
   // 1 add base css variable
+  // eslint-disable-next-line func-names
   function ({ addBase }) {
     addBase({
       body: {
