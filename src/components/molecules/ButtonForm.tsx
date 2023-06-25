@@ -15,7 +15,7 @@ export function ButtonForm() {
       {date ? <p>Date:{format(date, "PP")} </p> : null}
       <p>
         My name is
-        {name}{" "}
+        {name}
       </p>
       <Calendar
         mode="single"
@@ -25,7 +25,8 @@ export function ButtonForm() {
       />
       <Button
         onClick={() => setName("test")}
-        className="text-red"
+        className="text-red bg-red-800"
+        size="lg"
         variant="default"
       >
         {" "}
