@@ -49,3 +49,8 @@ export const textFadeIn = {
   initial: { y: 20, opacity: 0 },
   animate: { y: 0, opacity: 1 },
 };
+
+export const textFadeStyle = {
+  initial: { y: "100%" },
+  animate: { y: 0, transition: { delay: 0.5 } },
+};

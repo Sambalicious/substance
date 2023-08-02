@@ -42,7 +42,7 @@ export const Ghost: Story = {
 };
 export const ClassName: Story = {
   args: {
-    className: "rounded-full text-white  bg-blue-700 hover:text-black",
+    className: "rounded-full text-white  bg-red-700 hover:text-black",
     children: "Button",
   },
 };

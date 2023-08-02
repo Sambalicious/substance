@@ -1,12 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { PropsWithChildren } from "react";
-import { slowTextReveal, textFadeIn } from "../textVariant";
+import { motion, useInView } from "framer-motion";
+import { PropsWithChildren, useRef } from "react";
+import { slowTextReveal, textFadeIn, textFadeStyle } from "../textVariant";
 
 export function TextFadeInUp({ children }: PropsWithChildren) {
   return (
     <motion.p variants={slowTextReveal} initial="initial" animate="animate">
+      {children}
+    </motion.p>
+  );
+}
+export function TextFadeIn({ children }: PropsWithChildren) {
+  const ref = useRef(null);
+
+  const inView = useInView(ref, { once: true, margin: "-10%" });
+  return (
+    <motion.p
+      ref={ref}
+      variants={textFadeStyle}
+      initial="initial"
+      animate={inView ? "animate" : ""}
+    >
       {children}
     </motion.p>
   );
