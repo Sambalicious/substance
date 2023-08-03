@@ -7,18 +7,19 @@ export const shadcnPlugin = plugin(
   function ({ addBase }) {
     addBase({
       ":root": {
-        "--background": "0 0% 100%",
-        "--foreground": "0 0% 3.9%",
-        "--muted": "0 1% 96.1%",
-        "--muted-foreground": "0 0% 45.1%",
+        // shadcn theme
+        "--background": "0 0% 100%, 1",
+        "--foreground": "0 0% 3.9%, 1",
+        "--muted": "0 1% 96.1%, 1",
+        "--muted-foreground": "260, 4%, 52%, 1",
         "--popover": "0 0% 100%",
         "--popover-foreground": "0 0% 3.9%",
         "--card": "0 0% 100%",
         "--card-foreground": "0 0% 3.9%",
         "--border": "0 0% 89.8%",
         "--input": "0 0% 89.8%",
-        "--primary": "210 40% 9%",
-        "--primary-foreground": "210 40% 98%",
+        "--primary": "246, 91%, 61%",
+        "--primary-foreground": "270, 25%, 98%",
         "--secondary": "0 0% 96.1%",
         "--secondary-foreground": "0 0% 9%",
         "--accent": "0 0% 96.1%",
@@ -27,6 +28,21 @@ export const shadcnPlugin = plugin(
         "--destructive-foreground": "0 0% 98%",
         "--ring": "0 0% 63.9%",
         "--radius": "0.5rem",
+
+        // custom themes
+        "--dark-foreground": "255, 8%, 19%, 1",
+        "--dark-light-foreground": "270, 25%, 98%, 1",
+        "--purple-foreground": "246, 91%, 61%, .1",
+        "--purple": "246, 91%, 61%, 1",
+        "--red-foreground": "12, 100%, 49%, 1",
+        "--red": "12, 100%, 49%, .1",
+        "--blue-foreground": "201, 100%, 50%",
+        "--blue": "201, 100%, 50%,",
+        "--green-foreground": "170, 73%, 46%, 1",
+        "--green": "170, 73%, 46%, 0.1",
+        "--white": "270, 25%, 98%, 1",
+        "--gray": "260, 9%, 92%, 1",
+        "--yellow": "39, 100%, 73%, 1",
       },
       ".dark": {
         "--background": "0 0% 3.9%",
@@ -67,38 +83,59 @@ export const shadcnPlugin = plugin(
       },
       extend: {
         colors: {
-          border: "hsl(var(--border))",
-          input: "hsl(var(--input))",
-          ring: "hsl(var(--ring))",
-          background: "hsl(var(--background))",
-          foreground: "hsl(var(--foreground))",
+          border: "hsla(var(--border))",
+          input: "hsla(var(--input))",
+          ring: "hsla(var(--ring))",
+          background: "hsla(var(--background))",
+          foreground: "hsla(var(--foreground))",
           primary: {
-            DEFAULT: "hsl(var(--primary))",
-            foreground: "hsl(var(--primary-foreground))",
+            DEFAULT: "hsla(var(--purple))",
+            foreground: "hsla(var(--purple-foreground))",
           },
           secondary: {
-            DEFAULT: "hsl(var(--secondary))",
-            foreground: "hsl(var(--secondary-foreground))",
+            DEFAULT: "hsla(var(--secondary))",
+            foreground: "hsla(var(--secondary-foreground))",
           },
           destructive: {
-            DEFAULT: "hsl(var(--destructive))",
-            foreground: "hsl(var(--destructive-foreground))",
+            DEFAULT: "hsla(var(--destructive))",
+            foreground: "hsla(var(--destructive-foreground))",
           },
           muted: {
-            DEFAULT: "hsl(var(--muted))",
-            foreground: "hsl(var(--muted-foreground))",
+            DEFAULT: "hsla(var(--muted))",
+            foreground: "hsla(var(--muted-foreground))",
           },
           accent: {
-            DEFAULT: "hsl(var(--accent))",
-            foreground: "hsl(var(--accent-foreground))",
+            DEFAULT: "hsla(var(--accent))",
+            foreground: "hsla(var(--accent-foreground))",
           },
           popover: {
-            DEFAULT: "hsl(var(--popover))",
-            foreground: "hsl(var(--popover-foreground))",
+            DEFAULT: "hsla(var(--popover))",
+            foreground: "hsla(var(--popover-foreground))",
           },
           card: {
-            DEFAULT: "hsl(var(--card))",
-            foreground: "hsl(var(--card-foreground))",
+            DEFAULT: "hsla(var(--card))",
+            foreground: "hsla(var(--card-foreground))",
+          },
+          gray: {
+            100: "hsla(var(--gray))",
+          },
+          white: {
+            100: "hsla(var(--white))",
+          },
+          green: {
+            100: "hsla(var(--green-foreground))",
+          },
+          red: {
+            100: "hsla(var(--red-foreground))",
+          },
+          yellow: {
+            100: "hsla(var(--yellow))",
+          },
+          blue: {
+            100: "hsla(var(--blue-foreground))",
+          },
+          black: {
+            100: "hsla(var(--dark-foreground))",
           },
         },
         borderRadius: {
