@@ -9,6 +9,7 @@ export const allEmployees: Employee[] = [
     email: "ripu@meje.org",
     phoneNumber: "+447012345679s",
     employmentType: "full time",
+    image: "",
   },
   {
     id: "AMD-002",
@@ -18,6 +19,7 @@ export const allEmployees: Employee[] = [
     email: "daniel@meje.org",
     phoneNumber: "+4470123456795",
     employmentType: "full time",
+    image: "",
   },
   {
     id: "AMD-003",
@@ -27,6 +29,7 @@ export const allEmployees: Employee[] = [
     email: "ripu1@meje.org",
     phoneNumber: "+4470123456791",
     employmentType: "intern",
+    image: "",
   },
   {
     id: "AMD-004",
@@ -36,6 +39,7 @@ export const allEmployees: Employee[] = [
     email: "ripu2@meje.org",
     phoneNumber: "+4470123456790",
     employmentType: "contract",
+    image: "",
   },
   {
     id: "AMD-005",
@@ -45,5 +49,6 @@ export const allEmployees: Employee[] = [
     email: "ripu3@meje.org",
     phoneNumber: "+4470123456797",
     employmentType: "full time",
+    image: "",
   },
 ];

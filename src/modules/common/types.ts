@@ -6,4 +6,5 @@ export interface Employee {
   position: string;
   department: string;
   employmentType: "intern" | "contract" | "full time";
+  image: string;
 }

@@ -13,7 +13,16 @@ export default function Home() {
       >
         Click me
       </Button>{" "}
-      <Card />
+      <Card
+        name="Sadio Mane"
+        id="AMD-001"
+        email="sadio@test.com"
+        phoneNumber="+44397646474"
+        position="Sr Frontend Engineer"
+        department="Tech"
+        employmentType="intern"
+        image=""
+      />
     </main>
   );
 }
