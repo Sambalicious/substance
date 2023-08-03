@@ -1,5 +1,6 @@
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/modules/employee/components";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       >
         Click me
       </Button>{" "}
+      <Card />
     </main>
   );
 }

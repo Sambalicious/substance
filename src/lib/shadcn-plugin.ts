@@ -36,8 +36,8 @@ export const shadcnPlugin = plugin(
         "--purple": "246, 91%, 61%, 1",
         "--red-foreground": "12, 100%, 49%, 1",
         "--red": "12, 100%, 49%, .1",
-        "--blue-foreground": "201, 100%, 50%",
-        "--blue": "201, 100%, 50%,",
+        "--blue-foreground": "201, 100%, 50%, 1",
+        "--blue": "201, 100%, 50%, .1",
         "--green-foreground": "170, 73%, 46%, 1",
         "--green": "170, 73%, 46%, 0.1",
         "--white": "270, 25%, 98%, 1",
@@ -92,6 +92,10 @@ export const shadcnPlugin = plugin(
             DEFAULT: "hsla(var(--purple))",
             foreground: "hsla(var(--purple-foreground))",
           },
+          blue: {
+            DEFAULT: "hsla(var(--blue))",
+            foreground: "hsla(var(--blue-foreground))",
+          },
           secondary: {
             DEFAULT: "hsla(var(--secondary))",
             foreground: "hsla(var(--secondary-foreground))",
@@ -131,9 +135,7 @@ export const shadcnPlugin = plugin(
           yellow: {
             100: "hsla(var(--yellow))",
           },
-          blue: {
-            100: "hsla(var(--blue-foreground))",
-          },
+
           black: {
             100: "hsla(var(--dark-foreground))",
           },
