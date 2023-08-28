@@ -2,20 +2,52 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Employee } from "@/modules/common/types";
 import { EmployeeCard } from "./card";
+import { EmployeePage } from "..";
 
 interface TabListProps {
   id: number;
   name: string;
   component: React.ReactNode;
+  value: string;
 }
 export const tabList: TabListProps[] = [
-  { id: 1, name: "All Employees", component: <div>All Employees</div> },
-  { id: 2, name: "Marketing", component: <div>Marketing</div> },
-  { id: 3, name: "Accounting", component: <div>Accounting</div> },
-  { id: 4, name: "Cs. Support", component: <div>Cs. Support</div> },
-  { id: 5, name: "Fiance", component: <div>Fiance</div> },
-  { id: 6, name: "Human Resource", component: <div>Human Resource</div> },
-  { id: 7, name: "IT Support", component: <div>IT Support</div> },
+  {
+    id: 1,
+    name: "All Employees",
+    value: "allEmployees",
+    component: <div>All Employees</div>,
+  },
+  {
+    id: 2,
+    name: "Marketing",
+    value: "marketing",
+    component: <div>Marketing</div>,
+  },
+  {
+    id: 3,
+    name: "Accounting",
+    value: "accounting",
+    component: <div>Accounting</div>,
+  },
+  {
+    id: 4,
+    name: "Cs. Support",
+    value: "support",
+    component: <div>Cs. Support</div>,
+  },
+  { id: 5, name: "Finance", value: "finance", component: <div>Fiance</div> },
+  {
+    id: 6,
+    name: "Human Resource",
+    value: "humanResource",
+    component: <div>Human Resource</div>,
+  },
+  {
+    id: 7,
+    name: "IT Support",
+    value: "itSupport",
+    component: <div>IT Support</div>,
+  },
 ];
 
 interface EmployeeTabProps {
@@ -27,32 +59,41 @@ export default function EmployeeTab({ allEmployees }: EmployeeTabProps) {
     <div>
       <Tabs
         // orientation="vertical"
-        defaultValue="All Employees"
-        className="w-[400px] md:w-full"
+        defaultValue="allEmployees"
+        // className="w-[400px] md:w-full"
       >
         <TabsList className="grid w-full grid-cols-3 overflow-x-auto md:grid-cols-7 ">
           {tabList?.map(el => (
-            <TabsTrigger key={el.id} value={el.name}>
+            <TabsTrigger key={el.id} value={el.value}>
               {el.name}{" "}
             </TabsTrigger>
           ))}
         </TabsList>
-        <TabsContent value="All Employees">
-          {allEmployees?.length > 0 &&
-            allEmployees.map(el => (
-              <EmployeeCard
-                key={el.id}
-                name={el.name}
-                id={el.id}
-                email={el.email}
-                phoneNumber={el.phoneNumber}
-                position={el.position}
-                department={el.department}
-                employmentType={el.employmentType}
-                image={el.image}
-              />
-            ))}{" "}
+        <TabsContent value="allEmployees">
+          <div>
+            {allEmployees?.length > 0 &&
+              allEmployees.map(el => (
+                <EmployeeCard
+                  key={el.id}
+                  name={el.name}
+                  id={el.id}
+                  email={el.email}
+                  phoneNumber={el.phoneNumber}
+                  position={el.position}
+                  department={el.department}
+                  employmentType={el.employmentType}
+                  image={el.image}
+                />
+              ))}{" "}
+            <EmployeePage />
+          </div>
         </TabsContent>
+        <TabsContent value="marketing"> Marketing</TabsContent>
+        <TabsContent value="accounting"> Accounting</TabsContent>
+        <TabsContent value="support"> Support </TabsContent>
+        <TabsContent value="finance">Finance</TabsContent>
+        <TabsContent value="humanResource">Human Resource</TabsContent>
+        <TabsContent value="itSupport">IT support </TabsContent>
       </Tabs>
     </div>
   );
