@@ -76,12 +76,12 @@ export const employeeColumn: ColumnDef<Employee>[] = [
   },
 ];
 
-async function getEmployeeData(): Promise<Employee[]> {
+function getEmployeeData(): Employee[] {
   return allEmployees;
 }
 
-export async function EmployeePage() {
-  const data = await getEmployeeData();
+export function EmployeePage() {
+  const data = getEmployeeData();
   return (
     <section>
       <DataTable columns={employeeColumn} data={data} />

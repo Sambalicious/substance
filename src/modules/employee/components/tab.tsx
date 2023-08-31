@@ -1,8 +1,11 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+"use client";
 
-import { Employee } from "@/modules/common/types";
-import { EmployeeCard } from "./card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import { TabPanel, Tabs } from "@/components/molecules/Tabs";
+
+import { allEmployees } from "@/modules/common/mocks";
 import { EmployeePage } from "..";
+import { EmployeeCard } from "./card";
 
 interface TabListProps {
   id: number;
@@ -15,7 +18,7 @@ export const tabList: TabListProps[] = [
     id: 1,
     name: "All Employees",
     value: "allEmployees",
-    component: <div>All Employees</div>,
+    component: <EmployeePage />,
   },
   {
     id: 2,
@@ -50,11 +53,11 @@ export const tabList: TabListProps[] = [
   },
 ];
 
-interface EmployeeTabProps {
-  allEmployees: Employee[];
-}
+// interface EmployeeTabProps {
+//   allEmployees: Employee[];
+// }
 
-export default function EmployeeTab({ allEmployees }: EmployeeTabProps) {
+function EmployeeTab() {
   return (
     <div>
       <Tabs
@@ -98,3 +101,5 @@ export default function EmployeeTab({ allEmployees }: EmployeeTabProps) {
     </div>
   );
 }
+
+export default EmployeeTab;
