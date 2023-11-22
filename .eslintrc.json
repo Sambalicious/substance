@@ -8,14 +8,15 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb-typescript",
-    "prettier",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "plugin:import/typescript",
     "plugin:sonarjs/recommended",
     "plugin:security/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    // "prettier-plugin-tailwindcss",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
